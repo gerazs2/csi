@@ -5,7 +5,7 @@ export interface IUser extends Document{
     apellido:string;
     email:string;
     password:string;
-    fNacimiento:Date;
+    fNacimiento:string;
     telefono:string;
     dirrecion:string;
     edoResidencia:string;
