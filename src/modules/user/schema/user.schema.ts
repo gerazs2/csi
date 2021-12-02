@@ -1,7 +1,6 @@
 import * as mongoose from 'mongoose';
 
 export const UserSchema = new mongoose.Schema({
-      
     ClientId:{type:String,required:true},
     ClientName:{type:String,required:true},
     ProcessDate:{type:String,required:true},
@@ -36,8 +35,6 @@ export const UserSchema = new mongoose.Schema({
     StatusIn:{type:String,required:true},
     Renewal:{type:String,required:true},
     IllegalPresence:{type:String,required:true},
- 
-    
 }, {timestamps:true});
 
 UserSchema.index({Email:1},{unique:true});

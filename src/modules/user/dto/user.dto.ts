@@ -22,6 +22,9 @@ export class UserDTO{
     readonly WorkerId:string;
     @ApiProperty()
     @IsString()
+    readonly FirstName:string;
+    @ApiProperty()
+    @IsString()
     readonly LastName:string;
     @ApiProperty()
     @IsString()
@@ -38,7 +41,9 @@ export class UserDTO{
     @ApiProperty()
     @IsString()
     readonly State:string;
-
+    @ApiProperty()
+    @IsString()
+    readonly Email:string;
     @ApiProperty()
     @IsString()
     readonly ZipCode:string;
