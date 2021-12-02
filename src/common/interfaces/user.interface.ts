@@ -35,5 +35,6 @@ export interface IUser extends Document{
     StatusIn:string;
     Renewal:string;
     IllegalPresence:string;
+    uniqueId:string;
 
 }

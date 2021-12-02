@@ -104,4 +104,7 @@ export class UserDTO{
     @ApiProperty()
     @IsString()
     readonly IllegalPresence:string;
+    @ApiProperty()
+    @IsString()
+    readonly uniqueId:string;
 }

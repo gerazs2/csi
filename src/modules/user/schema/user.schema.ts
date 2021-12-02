@@ -35,7 +35,9 @@ export const UserSchema = new mongoose.Schema({
     StatusIn:{type:String,required:true},
     Renewal:{type:String,required:true},
     IllegalPresence:{type:String,required:true},
+    uniqueId:{type:String,required:true},
 }, {timestamps:true});
 
 UserSchema.index({Email:1},{unique:true});
 UserSchema.index({WorkerId:1},{unique:true});
+UserSchema.index({uniqueId:1},{unique:true});
