@@ -11,6 +11,8 @@ async function bootstrap() {
   app.useGlobalInterceptors(new TimeOutInterceptor());
   app.useGlobalPipes(new ValidationPipe());
 
+ 
+
   const options = new DocumentBuilder()
   .setTitle('CSI VISA')
   .setVersion('1.0')
@@ -21,6 +23,6 @@ async function bootstrap() {
 
   SwaggerModule.setup('/api/docs',app,document);
 
-  await app.listen(3000);
+  await app.listen(AppModule.port);
 }
 bootstrap();
