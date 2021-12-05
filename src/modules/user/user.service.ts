@@ -19,7 +19,13 @@ export class UserService {
     }
 
     async findOne(id: string): Promise<IUser> {
-        return await this.model.findById(id);
+      
+        const data =  this.model.findOne({uniqueId:id})
+
+       
+        
+
+        return await data;
     }
 
     ///////////////////////////////////////////////////////////////////
