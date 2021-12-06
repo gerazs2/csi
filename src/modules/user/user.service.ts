@@ -1,4 +1,4 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import { BadRequestException, Catch, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { IUser } from 'src/common/interfaces/user.interface';
@@ -18,14 +18,16 @@ export class UserService {
         return await this.model.findByIdAndUpdate(id, { ...UserDTO }, { new: true });
     }
 
+    
     async findOne(id: string): Promise<IUser> {
       
-        const data =  this.model.findOne({uniqueId:id})
-
-       
+        const todo = await this.model.findOne({uniqueId:id})
         
-
-        return await data;
+        if(!todo){
+            throw new NotFoundException(`This ${id} is not found`)
+        }
+       
+        return await todo;
     }
 
     ///////////////////////////////////////////////////////////////////
