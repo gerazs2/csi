@@ -36,6 +36,7 @@ export const UserSchema = new mongoose.Schema({
     Renewal:{type:String,required:true},
     IllegalPresence:{type:String,required:true},
     uniqueId:{type:String,required:true},
+    EndDate:{type:String,required:true},
 }, {timestamps:true});
 
 UserSchema.index({Email:1},{unique:true});

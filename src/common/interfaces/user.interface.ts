@@ -4,6 +4,7 @@ export interface IUser extends Document{
     ClientId:string;
     ClientName:string;
     ProcessDate:string;
+    EndDate:string;
     Consulate:string;
     FeePd:string;
     WorkerId:string;

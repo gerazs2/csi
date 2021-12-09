@@ -13,6 +13,9 @@ export class UserDTO{
     readonly ProcessDate:string;
     @ApiProperty()
     @IsString()
+    readonly EndDate:string;
+    @ApiProperty()
+    @IsString()
     readonly Consulate:string;
     @ApiProperty()
     @IsString()
