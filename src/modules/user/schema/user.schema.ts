@@ -1,6 +1,9 @@
 import * as mongoose from 'mongoose';
 
 export const UserSchema = new mongoose.Schema({
+  
+username:{type:String,required:true},
+password:{type:String,required:true},
     ClientId:{type:String,required:true},
     ClientName:{type:String,required:true},
     ProcessDate:{type:String,required:true},

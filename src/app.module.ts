@@ -10,6 +10,7 @@ import { EmpleadosModule } from './modules/empleados/empleados.module';
 import { ConfiguracionModule } from './config/config.module';
 import { APP_FILTER } from '@nestjs/core';
 import { Configuration } from './config/config.keys';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { Configuration } from './config/config.keys';
      }),
      
      MongooseModule.forRoot(process.env.URI_MONGODB),
-    UserModule, CompanyModule, ContractsModule, EmpleadosModule, ConfigModule],
+    UserModule, CompanyModule, ContractsModule, EmpleadosModule, ConfigModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

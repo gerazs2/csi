@@ -1,6 +1,7 @@
 
 export interface IUser extends Document{
-    
+    username:string;
+    password:string;
     ClientId:string;
     ClientName:string;
     ProcessDate:string;
